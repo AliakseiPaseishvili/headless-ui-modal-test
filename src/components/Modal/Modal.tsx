@@ -95,7 +95,14 @@ export const Modal: FC<ModalProps> = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="inline-block transform overflow-hidden rounded-lg text-left align-bottom shadow-xl transition-all sm:my-8 w-1/2 sm:align-middle">
+              <DialogPanel
+                className={twMerge(
+                  'md:h-auto transform overflow-visible rounded-md bg-white text-left align-middle shadow-sb transition-all border border-gray-200',
+                  MODAL_SIZE[type],
+                  isFullScreen ? 'w-full h-full' : 'h-auto',
+                  !isMobileMenu && 'py-6',
+                )}
+              >
                 {isMobileMenu ? (
                   <MobileHeaderModal
                     close={onClose}
