@@ -43,7 +43,7 @@ export const TestContent: FC<TestContentProps> = ({ onClose }) => {
         </div>
       </div>
       <div
-        style={{ marginTop: "1000px" }}
+        //style={{ marginTop: "1000px" }}
         className="flex bg-gray-50 px-4 py-3 sm:flex-row-reverse sm:gap-2"
       >
         <button onClick={onClose}>Cancel</button>
