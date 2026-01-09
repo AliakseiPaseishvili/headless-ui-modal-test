@@ -10,7 +10,7 @@ export const Test = () => {
   const [isOpenV2, setIsOpenV2] = useState(false);
 
   return (
-    <div className='fixed'>
+    <div className='fixed' style={{ overflow: 'hidden', }}>
       <Button onClick={() => setIsOpenV1((v) => !v)}>ToggleModal1</Button>
       <Button onClick={() => setIsOpenV2((v) => !v)}>ToggleModal2</Button>
       <ModalV1 isOpened={isOpenV1} onClose={() => setIsOpenV1(false)}>
