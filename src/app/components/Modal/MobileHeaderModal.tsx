@@ -1,9 +1,7 @@
-import React, { FC, JSX, ReactNode } from 'react';
-import { DialogTitle } from '@headlessui/react';
-import { ChevronLeftIcon, XMarkIcon } from '@heroicons/react/24/outline';
-
-import { BUTTON_COLOR } from '@/components/Button';
-import { IconButton } from '@/components/IconButton';
+import React, { FC, JSX, ReactNode } from "react";
+import { DialogTitle } from "@headlessui/react";
+import { ChevronLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "../Button";
 
 type MobileHeaderModalProps = {
   close: () => void;
@@ -26,13 +24,9 @@ export const MobileHeaderModal: FC<MobileHeaderModalProps> = ({
     <div className="grid grid-cols-3 items-center bg-gray-50 p-4 border-b border-gray-200">
       <div className="justify-self-start">
         {isBackButton && (
-          <IconButton
-            icon={ChevronLeftIcon}
-            onClick={onBackClick}
-            color={BUTTON_COLOR.TRANSPARENT}
-            iconClassName="size-5 text-gray-500 stroke-2 fill-none"
-            className="size-10"
-          />
+          <Button onClick={onBackClick}>
+            <ChevronLeftIcon className="size-5 text-gray-500 stroke-2 fill-none" />
+          </Button>
         )}
       </div>
       <DialogTitle
@@ -47,13 +41,9 @@ export const MobileHeaderModal: FC<MobileHeaderModalProps> = ({
             {logo}
           </div>
         ) : (
-          <IconButton
-            icon={XMarkIcon}
-            onClick={close}
-            color={BUTTON_COLOR.TRANSPARENT}
-            iconClassName="size-5 text-gray-500 stroke-2"
-            className="size-10"
-          />
+          <Button onClick={close}>
+            <XMarkIcon className="size-5 text-gray-500 stroke-2" />
+          </Button>
         )}
       </div>
     </div>

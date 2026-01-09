@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren } from "react";
 
 type ButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({ onClick, children }) => (
