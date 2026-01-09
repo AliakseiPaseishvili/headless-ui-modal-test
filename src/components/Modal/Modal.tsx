@@ -84,7 +84,7 @@ export const Modal: FC<ModalProps> = ({
           />
         </TransitionChild>
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex h-full items-center justify-center">
+         <div className="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0">
             <TransitionChild
               as={Fragment}
               transition={includeContentTransition}
