@@ -97,7 +97,7 @@ export const Modal: FC<ModalProps> = ({
             >
               <DialogPanel
                 className={twMerge(
-                  'md:h-auto transform overflow-visible rounded-md bg-white text-left align-middle shadow-sb transition-all border border-gray-200',
+                  'md:h-auto transform overflow-hidden rounded-md bg-white text-left align-middle shadow-sb transition-all border border-gray-200',
                   MODAL_SIZE[type],
                   isFullScreen ? 'w-full h-full' : 'h-auto',
                   !isMobileMenu && 'py-6',
