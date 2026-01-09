@@ -84,7 +84,7 @@ export const Modal: FC<ModalProps> = ({
           />
         </TransitionChild>
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-screen items-center justify-center">
+          <div className="flex min-h-dvh items-center justify-center">
             <TransitionChild
               as={Fragment}
               transition={includeContentTransition}
@@ -99,7 +99,7 @@ export const Modal: FC<ModalProps> = ({
                 className={twMerge(
                   'md:min-h-1/2 transform overflow-visible rounded-md bg-white text-left align-middle shadow-sb transition-all border border-gray-200',
                   MODAL_SIZE[type],
-                  isFullScreen ? 'w-full min-h-screen' : 'h-auto',
+                  isFullScreen ? 'w-full min-h-dvh' : 'h-auto',
                   !isMobileMenu && 'py-6',
                 )}
               >
